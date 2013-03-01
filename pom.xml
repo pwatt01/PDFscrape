@@ -4,7 +4,7 @@
 
   <groupId>org.watt.apps</groupId>
   <artifactId>PDFScrape</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>PDFScrape</name>
@@ -74,6 +74,11 @@
     	<groupId>oauth.signpost</groupId>
     	<artifactId>signpost-core</artifactId>
     	<version>1.2.1.2</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.thoughtworks.xstream</groupId>
+    	<artifactId>xstream</artifactId>
+    	<version>1.4.4</version>
     </dependency>
   </dependencies>
 </project>
