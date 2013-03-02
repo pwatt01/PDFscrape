@@ -1,4 +1,4 @@
-package org.watt.apps.PDFScrape;
+package org.watt.apps.TripItConversions;
 
 import java.util.Collection;
 
