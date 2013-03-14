@@ -71,9 +71,10 @@ public class App
 
 	public static void main( String[] args ) throws Exception{
 		//get Activity List
-		TripomaticTrip PP = new TripomaticTrip();
-		ArrayList<Activity> list = PP.run(args);
-
+		TripomaticTrip tt = new TripomaticTrip();
+		ArrayList<Activity> list = tt.run(args);
+		//TODO list all current trips and make a choice from them
+		//TODO make choice to create trip if desired
 		//TODO Connect to server (example)
 		Credential cred;
 		Client client;
@@ -134,10 +135,10 @@ public class App
 				System.err.println(ex.getMessage());
 			}  
 
-
+			
 			
 		}
 
-
+		System.out.println("Done");
 	}
 }

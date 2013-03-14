@@ -34,15 +34,15 @@ public class TripomaticTrip implements Trip{
 		
 		//get user input
 		System.out.println("Please enter the TripIt Trip ID \r\n" +
-				"(located in the url, i.e. https://www.tripit.com/trip/show/id/65902138):");
+				"(located in the url, i.e. https://www.tripit.com/trip/show/id/65908159):");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//		tripId = br.readLine();
-		tripId="65902138";
+		tripId = br.readLine();
+		//tripId="65908159";
 		
 		System.out.println("Please enter the starting date for your Tripomatic itinerary (dd/mm/yyyy)");
 		br = new BufferedReader(new InputStreamReader(System.in));
-//		dateInput = br.readLine();
-		dateInput = "2/3/2013";
+		dateInput = br.readLine();
+		//dateInput = "2/3/2013";
 		
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 		try {
@@ -93,7 +93,14 @@ public class TripomaticTrip implements Trip{
 							if(line.matches("[A-Z]")){
 								//activity.order = line;
 							}else if(line.startsWith("GPS: ")){
-//								activity.GPS = line;
+								if(activity.Address.address ==null){
+									line = line.replaceAll("GPS: ", "");
+									line = line.replaceAll("S", "-");
+									line = line.replaceAll("W", "-");
+									line = line.replaceAll("E", "");
+									line = line.replaceAll("N", "");
+									activity.Address.address = line;
+								}
 							}else if(line.contains(", USA")){
 								activity.Address.address = line;
 							}else if(line.startsWith("Phone:")){
